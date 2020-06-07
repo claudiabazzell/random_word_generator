@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Word Game</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="attempt">Random Word (attempt #{{request.session.attempt}})</div>
+    <div class="word">{{request.session.word}}</div>
+    <form action="/generate">
+      {% csrf_token %}
+      <button>Generate</button>
+    </form>
+    <form action="/reset">
+      {% csrf_token %}
+      <button>Reset Counter</button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

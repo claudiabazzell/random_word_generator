@@ -1,0 +1,18 @@
+ .container {
+   height: 100%;
+   width: 100%;
+   padding-top: 15%;
+   text-align: center;
+   background-color: antiquewhite;
+ }
+
+ .container>* {
+   margin-bottom: 20px;
+ }
+
+ .container>.word {
+   border: 3px solid black;
+   padding: 24px;
+   width: 400px;
+   margin: 0 auto 20px;
+ }
